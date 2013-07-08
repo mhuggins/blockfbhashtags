@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+  "name": "Facebook Hashtag Blocker",
+  "description": "Remove hashtags from your friends' Facebook posts.",
+  "version": "1.0",
+  "permissions": [
+    "http://*.facebook.com/",
+    "https://*.facebook.com/"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*.facebook.com/*"],
+      "js": ["jquery-2.0.3.min.js", "hashtags.js"]
+    }
+  ]
+}
